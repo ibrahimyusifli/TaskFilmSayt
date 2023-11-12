@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  /* linklerin style (onlerindeki noqte,reqemleme ve saire ) */
+}
+a {
+  text-decoration: none;
+  /* altdan xet zad */
+}
+body {
+  background-color: black;
+}
+header {
+  background-color: black;
+  margin-bottom: 20px;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.head {
+  display: flex;
+  justify-content: space-between; /* sola saga atir*/
+  align-items: center; /* yuxardan asagidan merkezlesdirir atir*/
+}
+.head-left {
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+.head-left nav {
+  display: none; /* 992 pxden balaca olanda nav'im gorsenmir*/
+}
+.head-left-img {
+  height: 44px;
+  margin: 0 16px 0 0; /* yuxari,sag,asagi,sol */
+}
+.head-left-img img {
+  height: 100%; /* img divimin 44px in 100 faizie qederdir menim heightim*/
+}
+.head-left a {
+  /* kino.az*/
+  color: #fff;
+  font: 700 17.297px "Roboto", sans-serif; /*qalinliq, uzunluq, yazimin stili*/
+}
+.head-right nav ul {
+  display: flex;
+  align-items: center;
+  padding-top: 15px; /* biraz merkezde dursun deye yaziriq */
+}
+.head-right ul li a {
+  color: #e6e6e6;
+  font: 400 15px/20px "Roboto", sans-serif;
+  text-transform: capitalize; /*ilk herf boyuk yaziriq*/
+}
+.fa-magnifying-glass {
+  /* icon classi */
+  color: #fff;
+  font-size: 18px;
+}
+.head-right nav ul li {
+  margin-left: 24px; /* listin soluna 24 px mesafe veririk*/
+}
+.head-right nav ul li:last-child {
+  margin-left: 16px;
+}
+.head-right button {
+  padding: 6px 9px; /* yuxardan,asagidan 6px, sagdan soldan 9px mesafe*/
+  border: 1px solid #fff;
+  border-radius: 8px; /* yumru olsun deye yaziriq borderimiz*/
+  color: #fff;
+  font: 700 14px/20px "Roboto", sans-serif;
+  letter-spacing: 0.2px; /*log in'deki herfler arasi mesafem*/
+  background-color: black;
+  text-transform: capitalize;
+}
+/* footer hissesi */
+footer {
+  background-color: #000;
+  padding: 49px 0 24px 0;
+}
+.footer-input {
+  display: flex; /* icon'la input'umu yan-yana getiririk*/
+  align-items: center;
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #b1b1b1; /**/
+}
+footer div input {
+  width: 100%;
+  border: 0;
+  outline: none;
+}
+footer i {
+  font-size: 24px;
+  color: #000 !important;
+  margin: 0 12px 0 0;
+}
+footer div input::placeholder {
+  color: #757575;
+  font: 400 16px "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+.footer-wrapper {
+  margin-top: 47px;
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /*kiciltende 2 sutun halina getiririk footerimizi*/
+  gap: 60px 0; /*her bir footer-card arasindaki mesafe 60px olsun*/
+}
+.footer-card h3 {
+  color: #fff;
+  font: 700 18px/20px "Roboto", sans-serif;
+}
+.footer-card ul li a {
+  color: #e6e6e6;
+  font: 400 14px/18px "Roboto", sans-serif;
+}
+.footer-card ul {
+  padding-left: 0;
+}
+
+.card {
+  background-color: black;
+}
+.card-body h5,
+p,
+a {
+  color: #fff;
+}
+
+/* responsive hisse */
+@media (min-width: 576px) {
+  .container {
+    padding: 0;
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .footer-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .head-left nav {
+    display: block; /*nav'im gorunsun*/
+  }
+  .head-left nav ul {
+    display: flex;
+    padding-top: 15px;
+  }
+  .head-left nav ul li {
+    padding: 0 12px;
+  }
+  .head-left nav ul li a {
+    color: #e6e6e6;
+    font: 300 15px/40px "Roboto", sans-serif;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .footer-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px 0;
+  }
+}

@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#div1 {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: darkslategray;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 10px;/*elemmetin asagidan olan mesafesi*/
+  font-size: 50px;
+}
+p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+h1,
+p {
+  color: #fff;
+}
